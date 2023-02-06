@@ -1,10 +1,9 @@
 {
-  "name": "test",
   "short_name": "test",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-  "display": "standalone",
-  "Scope": "https://tactival.github.io/PWA_IOS_TEST/",
+  "display": "fullscreen",
+  "scope": "https://tactival.github.io/PWA_IOS_TEST/",
   "start_url": "https://tactival.github.io/PWA_IOS_TEST/",
   "icons": [
     {
