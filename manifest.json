@@ -1,0 +1,17 @@
+{
+  "name": "test",
+  "short_name": "test",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/ChatWeb/chat",
+  "icons": [
+    {
+      "src": "resources/images/app/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+   
+  ],
+}

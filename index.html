@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="installPWA();">Install PWA</button>
+
+<script>
+  function installPWA() {
+    // Check if the browser supports Service Workers
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/serviceworker.js')
+        .then(() => {
+          // Show the "Add to Home Screen" prompt
+          prompt();
+        })
+        .catch((error) => {
+          console.error('Error during service worker registration:', error);
+        });
+    }
+  }
+</script>
+</body>
+</html>
