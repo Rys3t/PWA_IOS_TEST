@@ -4,14 +4,13 @@
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
-  "Scope": "/",
-  "start_url": "./index.html",
+  "Scope": "https://tactival.github.io/PWA_IOS_TEST/",
+  "start_url": "https://tactival.github.io/PWA_IOS_TEST/",
   "icons": [
     {
-      "src": "resources/images/app/icon-144x144.png",
+      "src": "icon/fox-icon.png",
       "sizes": "144x144",
       "type": "image/png"
-    }
-   
+    }   
   ]
 }
