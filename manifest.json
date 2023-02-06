@@ -1,15 +1,15 @@
 {
-  "short_name": "test",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "background_color": "purple",
+  "description": "Shows random fox pictures. Hey, at least it isn't cats.",
   "display": "fullscreen",
-  "scope": "https://tactival.github.io/PWA_IOS_TEST/",
-  "start_url": "https://tactival.github.io/PWA_IOS_TEST/",
   "icons": [
     {
       "src": "icon/fox-icon.png",
-      "sizes": "144x144",
+      "sizes": "192x192",
       "type": "image/png"
-    }   
-  ]
+    }
+  ],
+  "name": "InstallTest",
+  "short_name": "test",
+  "start_url": "https://tactival.github.io/PWA_IOS_TEST/"
 }
