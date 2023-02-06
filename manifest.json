@@ -5,13 +5,13 @@
   "background_color": "#2196f3",
   "display": "standalone",
   "Scope": "/",
-  "start_url": "/ChatWeb/chat",
+  "start_url": "./index.html",
   "icons": [
     {
       "src": "resources/images/app/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
-    },
+    }
    
-  ],
+  ]
 }
