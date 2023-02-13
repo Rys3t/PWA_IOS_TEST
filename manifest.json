@@ -11,6 +11,6 @@
   ],
   "name": "InstallTest",
   "short_name": "test",
-  "start_url": "/",
+  "start_url": "/index.html",
   "scope":"/"
 }
