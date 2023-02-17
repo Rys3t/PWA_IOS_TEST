@@ -19,14 +19,15 @@
 <input type="file" capture="environment" accept="image/*" />
 <a href="/read.html">read頁面</a>
 
-<button id = 'btnPhoneCall'><a href="tel:" id = 'phoneid'>撥打電話:</a></button>
+<button id = 'btnPhoneCall'><a href="" id = 'phonehref'>撥打電話:</a></button>
 <input type="text" id = 'phoneNumber'>
 
 <script>
 document.getElementById('btnPhoneCall').onclick = function(){
   var phoneNumber = parseInt(document.getElementById('phoneNumber').value)
   //alert(phoneNumber);
-  document.getElementById('phoneid').value = phoneNumber;
+  document.getElementById('phonehref').setAttribute("href", "tel:" + phoneNumber);
+  alert(document.getElementById('phonehref').href);
 }
 
 </script>
