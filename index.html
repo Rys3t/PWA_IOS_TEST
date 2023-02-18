@@ -24,7 +24,7 @@
 
 <script>
 document.getElementById('btnPhoneCall').onclick = function(){
-  var phoneNumber = parseInt(document.getElementById('phoneNumber').value)
+  var phoneNumber = document.getElementById('phoneNumber').value;
   //alert(phoneNumber);
   document.getElementById('phonehref').setAttribute("href", "tel:" + phoneNumber);
   alert(document.getElementById('phonehref').href);
@@ -41,7 +41,6 @@ function test(){
   }
   xhr.open("GET", "https://api.unsplash.com/photos/?client_id=XeMLEo-cG4umamAaRPxahF5CC7nhdSYGtbKlmU1O7Sk");
   xhr.send();
-  
 }
 </script>
 <script>function fetchtest(){
