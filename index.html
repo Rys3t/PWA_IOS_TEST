@@ -17,6 +17,7 @@
 <button onclick="window.close();">Close Window</button>
 <button onclick=test()>test ajax</button>
 <button onclick=fetchtest()>test fetch</button>
+<button onclick=cookiestest()>test cookies</button>
 <input type="file" capture="user" accept="image/*" />
 <input type="file" capture="environment" accept="image/*" />
 <a href="/read.html">read頁面</a>
@@ -53,6 +54,13 @@ function test(){
     .catch((error) => {
       console.log(`Error: ${error}`);
     })
+}
+</script>
+<script>function cookiestest(){
+  document.cookie = 'data=123';
+  const cookies = document.cookie.split(';');
+  const data = cookies.find(cookie => cookie.trim().startsWith('data=')).split('=')[1];
+  alert(data);
 }
 </script>
 <video id="preview"></video>
