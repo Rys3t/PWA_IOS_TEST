@@ -8,7 +8,8 @@
     <script src="serviceworker.js"></script>
     <script type="text/javascript" src="instascan.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="all.css">
+	  <link rel="stylesheet" href="all.css">
+  <script src="getCookie.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
 <input type="text" id = 'phoneNumber'>
 
 <script>
-document.getElementById('btnPhoneCall').onclick = function(){
+document.getElementById('btnPhoneCall').onclick = () => {//撥打電話
   var phoneNumber = document.getElementById('phoneNumber').value;
   //alert(phoneNumber);
   document.getElementById('phonehref').setAttribute("href", "tel:" + phoneNumber);
@@ -42,12 +43,12 @@ function test(){
     let response = JSON.parse(this.response);
     console.log(response)
   }
-  xhr.open("GET", "https://api.unsplash.com/photos/?client_id=XeMLEo-cG4umamAaRPxahF5CC7nhdSYGtbKlmU1O7Sk");
+  xhr.open("GET", "https://localhost:44304/Dispatch?WorkId=1");
   xhr.send();
 }
 </script>
 <script>function fetchtest(){
-  fetch('http://10.1.6.192:802/WebService_Android.asmx/QueryUser?user_name=813717&password=f54321')
+  fetch('https://localhost:44304/Dispatch?WorkId=1')
     .then((response) => {
       console.log(response);
     })
@@ -58,9 +59,10 @@ function test(){
 </script>
 <script>function cookiestest(){
   document.cookie = 'data=123';
-  const cookies = document.cookie.split(';');
-  const data = cookies.find(cookie => cookie.trim().startsWith('data=')).split('=')[1];
-  alert(data);
+  document.cookie = 'data1=1';
+  document.cookie = 'data2=2';
+  let test = getCookie('data1');
+  alert(test);
 }
 </script>
 <video id="preview"></video>
