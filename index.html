@@ -16,8 +16,9 @@
 <img src="images/tri.png" alt="tri">
 
 <button onclick="window.close();">Close Window</button>
-<button onclick=test()>test ajax</button>
+<button onclick=testajax()>test ajax</button>
 <button onclick=fetchtest()>test fetch</button>
+<button onclick=fetchpost()>test fetchpost</button>
 <button onclick=cookiestest()>test cookies</button>
 <input type="file" capture="user" accept="image/*" />
 <input type="file" capture="environment" accept="image/*" />
@@ -37,32 +38,36 @@ document.getElementById('btnPhoneCall').onclick = () => {//撥打電話
 </script>
 
 <script>
-function test(){
+function testajax(){
   var xhr = new XMLHttpRequest();
-  xhr.onload = function () {
+  xhr.onload = function() {
     let response = JSON.parse(this.response);
     console.log(response)
   }
-  xhr.open("GET", "https://localhost:44304/Dispatch?WorkId=1");
+  xhr.open('GET', 'https://localhost:44304/Dispatch/GetDispatchList?WorkId=1');
   xhr.send();
 }
 </script>
-<script>function fetchtest(){
-  fetch('https://localhost:44304/Dispatch?WorkId=1')
+<script>async function fetchtest(){
+  let workid = '1';
+  fetch('https://localhost:44304/Dispatch/GetDispatchList?WorkId=1')
     .then((response) => {
-      console.log(response);
+        return response.json();//把資料轉成JSON格式
     })
-    .catch((error) => {
+    .then( (response) => {//成功結果處理
+        console.log(response);
+    })
+    .catch((error) => {//錯誤結果處理
       console.log(`Error: ${error}`);
     })
 }
 </script>
-<script>function cookiestest(){
-  document.cookie = 'data=123';
+<script>async function cookiestest(){
+  let lkey = 'key1';
+  let lvalue = 'value1';
+  document.cookie = lkey + '=' + lvalue;
   document.cookie = 'data1=1';
-  document.cookie = 'data2=2';
-  let test = getCookie('data1');
-  alert(test);
+  alert(getCookie('key1'));
 }
 </script>
 <video id="preview"></video>
