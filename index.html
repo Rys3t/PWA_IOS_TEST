@@ -18,7 +18,6 @@
 <body>
   <img src="images/tri.png" alt="tri">
 
-  <button onclick="window.close();">Close Window</button>
   <button onclick=testajax()>test ajax</button>
   <button onclick=fetchtest()>test fetch</button>
   <button onclick=fetchpost()>test fetchpost</button>
@@ -51,19 +50,17 @@
     async function fetchtest() {
       //let data = [];
       let workid = '1';
-      fetch('https://localhost:44304/Dispatch/GetDispatchList?WorkId=1')
+      fetch(`https://localhost:44304/Dispatch/GeDispatchList?workid=${workid}`)
         .then((response) => {//成功結果處理
           return response.json();//把資料轉成JSON格式
-          //console.log(response)
         })
         .then(data => {
           console.log(data);
           const pkid0 = data[0].pkid;
           console.log(pkid0);
-          //  render(data)
         })
         .catch((error) => {//錯誤結果處理
-          console.log(`Error: ${error}`);
+          alert(`Error: ${error}`);
         })
     }
     async function cookiestest() {
