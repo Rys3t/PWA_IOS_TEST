@@ -11,6 +11,6 @@
   ],
   "name": "InstallTest",
   "short_name": "test",
-  "start_url": "https://tactival.github.io/PWA_IOS_TEST/",
-  "scope":"/"
+  "start_url": "http://localhost:8080/index.html",
+  "scope": "/"
 }
